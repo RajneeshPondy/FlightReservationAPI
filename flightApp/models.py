@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Flight(models.Model):
-    flight_number = models.CharField(max_length=20)
+    flight_number = models.CharField(max_length=10)
     operating_airlines = models.CharField(max_length=20)
-    departure_city = models.CharField(max_length=30)
+    departure_city = models.CharField(max_length=30, blank=True)
     arrival_city = models.CharField(max_length=30)
     date_of_departure = models.DateField()
     estimated_time_of_departure = models.TimeField()
